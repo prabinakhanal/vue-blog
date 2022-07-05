@@ -21,8 +21,8 @@
 
         <div class="pagination text-gray-300 flex items-center p-10 space-x-8 justify-center" id="pagination">
 
-            <div v-for="(pagenumber, index) in count" :key="index">
-                <button @click="buttons(index)" class="bg-gray-500 text-white h-10 w-20 hover:bg-blue-500 rounded-lg m-3 font-bold">{{pagenumber}}</button>
+            <div v-for="(pagenumbers, index) in count" :key="index">
+                <button v-on:click="buttons(index)" class="bg-gray-500 text-white h-10 w-20 hover:bg-blue-500 rounded-lg m-3 font-bold">{{pagenumbers}}</button>
 
             </div>
         </div>
