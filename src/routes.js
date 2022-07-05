@@ -8,7 +8,7 @@ import commentPage from './components/comment.vue'
 const routes= [
     {
         name:'mainPage',
-        path:'/main',
+        path:'/',
         component:mainPage
 
     },
@@ -20,13 +20,13 @@ const routes= [
     },
     {
         name:'detailsPage',
-        path:'/details/:postId',
+        path:'/post/details/:postId',
         component:detailsPage
 
     },
     {
         name:'commentPage',
-        path:'/comment',
+        path:'/post/details/comment/:postId',
         component:commentPage
 
     },
