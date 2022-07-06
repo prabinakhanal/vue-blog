@@ -4,6 +4,7 @@ import mainPage from './components/main.vue'
 import postPage from './components/post.vue'
 import detailsPage from './components/details.vue'
 import commentPage from './components/comment.vue'
+import contactPage from './components/contactUs.vue'
 
 const routes= [
     {
@@ -28,6 +29,12 @@ const routes= [
         name:'commentPage',
         path:'/post/details/comment/:postId',
         component:commentPage
+
+    },
+    {
+        name:'contactPage',
+        path:'/contactUs',
+        component:contactPage
 
     },
 ];

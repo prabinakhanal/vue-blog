@@ -1,4 +1,5 @@
 <template>
+<navBar/>
 <div class="bg-gradient-to-r from-indigo-400 to-purple-400 h-screen">
     <div v-for="comment in comments" :key="comment" class="flex justify-center items-center">
         <div  class="bg-white bg-no-repeat bg-cover flex flex-col h-[270px] mt-10 border-b-4 w-2/5 justify-center items-center rounded-lg p-5">
@@ -18,9 +19,13 @@
 import {
     useRoute
 } from 'vue-router';
+import navBar from './nav.vue'
 import axios from 'axios'
 export default {
     name: 'commentPage',
+    components:{
+navBar
+    },
 
     data() {
         return {
@@ -32,7 +37,7 @@ export default {
         const route = useRoute();
         console.warn("route:", route.params)
         let postId = route.params.postId
-        axios.get('https://dummyjson.com/posts/' + postId + '/comments')
+        axios.get(`${ postId}/comments`)
             .then((result) => {
                 console.log(result)
                 this.comments = result.data.comments

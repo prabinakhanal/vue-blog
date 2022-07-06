@@ -9,7 +9,7 @@
                 <h1 class="text-3xl pb-5 text-slate-800 font-bold">{{Details.title}}</h1>
                 <p class="font-medium text-2xl text-gray-500 pb-5">{{Details.body}}</p>
                 <div class="flex flex-row justify-between">
-                    <h1 class="text-2xl font-medium  text-slate-600 pb-5"><i class="fa-solid fa-user-tag"></i>: {{Details.tags}}
+                    <h1 class="text-2xl font-medium  text-slate-600 pb-5"><i class="fa-solid fa-user-tag"></i>:{{Details.tags}}
                     </h1>
                     <h1 class=" font-bold text-slate-600 text-2xl pb-5"><i class="fa-solid fa-heart"></i> {{Details.reactions}}
                     </h1>
@@ -84,7 +84,7 @@ export default {
         console.warn("route:", route.params)
         let postId = route.params.postId
         console.log(postId)
-        axios.get(`https://dummyjson.com/posts/${postId}`)
+        axios.get(`${postId}`)
             .then((result) => {
                 console.log(result)
                 this.Details = result.data

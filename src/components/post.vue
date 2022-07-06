@@ -74,7 +74,7 @@ export default {
     },
 
     async mounted() {
-        let result = await axios.get("https://dummyjson.com/posts?limit=150")
+        let result = await axios.get("?limit=150")
         console.log('api data', result.data.posts);
         this.postList = result.data.posts;
         this.pagination();
