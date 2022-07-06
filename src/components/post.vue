@@ -2,19 +2,8 @@
 <navBar/>
 <div class="bg-gradient-to-r from-indigo-400 to-purple-400">
     <div class="grid grid-x-5 grid-y-5 grid-cols-3">
-        <div class="" v-for="(list,index) in trimedData" :key="index">
-            <div class="group bg-white bg-no-repeat bg-cover overflow-hidden w-[400px] m-8 h-[250px] mt-8 shadow-lg rounded-lg p-8  ">
-                <h1 class="text-2xl pb-5 text-slate-800 font-bold">{{list.title}}</h1>
-                
-                <div class="flex flex-row justify-between">
-                    <h1 class="text-xl font-medium  text-slate-600 pb-5"><i class="fa-solid fa-user-tag"></i>: {{list.tags}}</h1>
-                </div>
-
-                <div class="flex flex-col justify-center items-center">
-                    <button v-on:click="displayDetail(list)" class="hidden group-hover:block bg-gray-500 text-white h-10 w-44 rounded-lg font-bold">Read more</button>
-                </div>
-            </div>
-        </div>
+        <postCard  v-for="(list,index) in  trimedData" :key="index" :post="list">
+        </postCard>
     </div>
 
     <div class="text-gray-300 flex items-center p-10 space-x-8 justify-center">
@@ -32,8 +21,10 @@
 </template>
 
 <script>
+import postCard from './postCard.vue'
 import navBar from './nav.vue'
 import axios from 'axios'
+
 export default {
     name: 'postPage',
 
@@ -48,8 +39,10 @@ export default {
         }
     },
     components:{
-        navBar
-    },
+    navBar,
+    postCard
+    
+},
     methods: {
         pagination() {
             let trimStart = this.row_per_page * this.page;
@@ -74,7 +67,7 @@ export default {
     },
 
     async mounted() {
-        let result = await axios.get("https://dummyjson.com/posts?limit=150")
+        let result = await axios.get("?limit=150")
         console.log('api data', result.data.posts);
         this.postList = result.data.posts;
         this.pagination();

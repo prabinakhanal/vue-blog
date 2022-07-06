@@ -84,7 +84,7 @@ export default {
         console.warn("route:", route.params)
         let postId = route.params.postId
         console.log(postId)
-        axios.get(`https://dummyjson.com/posts/${postId}`)
+        axios.get(`${postId}`)
             .then((result) => {
                 console.log(result)
                 this.Details = result.data

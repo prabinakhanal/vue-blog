@@ -32,7 +32,7 @@ export default {
         const route = useRoute();
         console.warn("route:", route.params)
         let postId = route.params.postId
-        axios.get('https://dummyjson.com/posts/' + postId + '/comments')
+        axios.get( + postId + '/comments')
             .then((result) => {
                 console.log(result)
                 this.comments = result.data.comments
