@@ -8,11 +8,11 @@
             </div>
             <div class="sm:hidden lg:flex">
                 <ul class="flex space-x-10 text-gray-400 text-xl">
-                    <li><a href="" class="border-b-[2px] border-indigo-300">Home</a></li>
-                    <li><a href="" class="hover:border-b-[2px] border-indigo-300">Posts</a></li>
-                    <li><a href="" class="hover:border-b-[2px] border-indigo-300">Contact us</a></li>
-                    <li><a href="" class="hover:border-b-[2px] border-indigo-300">Details</a></li>
-                    <li><a href="" class="hover:border-b-[2px] border-indigo-300">Comments</a></li>
+                    <router-link  class="hover:border-b-[2px] border-indigo-300" to="/" >Home</router-link>
+                    <router-link  class="hover:border-b-[2px] border-indigo-300" to="/post">Posts</router-link>
+                    <router-link  class="hover:border-b-[2px] border-indigo-300" to="">Contact us</router-link>
+                    <router-link  class="hover:border-b-[2px] border-indigo-300" to="/post/details/:postId">Details</router-link>
+                    <router-link  class="hover:border-b-[2px] border-indigo-300" to="/post/details/comment/:postId">Comments</router-link>
 
                 </ul>
             </div>
@@ -21,32 +21,14 @@
                 <button type="button" class="border-2 rounded bg-gray-500 text-white font-medium w-32 h-10">sign
                     in</button>
             </div>
-            <div class="sm:hidden lg:flex lg:space-x-3 ">
-                <button type="button" class="border-2 rounded bg-gray-500 text-white font-medium w-32 h-10">sign
-                    in</button>
-            </div>
         </nav>
     </div>
 
-    <div class="bg-gradient-to-r from-indigo-400 to-purple-400  bg-no-repeat bg-cover">
-
-        <div id="box" class="sm:hidden lg:hidden sm:flex  sm:justify-center sm:items-center">
-            <div class="sm:overflow-hidden h-52 w-52 sm:bg-gray-200  sm:flex  sm:justify-center sm:items-center mt-0 sm:rounded-lg sm:border-2 sm:shadow-lg">
-                <ul class="sm:flex sm:flex-col sm:space-y-5  sm:text-gray-400 text-xl">
-                    <router-link class="border-b-[2px] border-indigo-300" to="/">Home</router-link>
-                    <router-link class="hover:border-b-[2px] border-indigo-300" to="/post">Posts</router-link>
-                    <router-link class="hover:border-b-[2px] border-indigo-300" to="">Contact us</router-link>
-                    <router-link class="hover:border-b-[2px] border-indigo-300" to="/post/details/:postId">Details</router-link>
-                    <router-link class="hover:border-b-[2px] border-indigo-300" to="/post/details/comment/:postId">Comments</router-link>
-                </ul>
-            </div>
-        </div>
-    </div>
 </div>
 </template>
 
 <script>
 export default {
-    name:'navBar',
+    name: 'navBar',
 };
 </script>

@@ -30,6 +30,7 @@ const routes= [
         component:commentPage
 
     },
+    
 ];
 
 const router= createRouter({
