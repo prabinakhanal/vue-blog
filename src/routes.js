@@ -20,7 +20,7 @@ const routes= [
     },
     {
         name:'detailsPage',
-        path:'/post/details/:postId',
+        path:'/post/:postId',
         component:detailsPage
 
     },

@@ -15,9 +15,7 @@
 </template>
 
 <script>
-import {
-    useRoute
-} from 'vue-router';
+
 import axios from 'axios'
 export default {
     name: 'commentPage',
@@ -28,17 +26,25 @@ export default {
         }
     },
 
+    
     created() {
-        const route = useRoute();
-        console.warn("route:", route.params)
-        let postId = route.params.postId
-        axios.get( + postId + '/comments')
-            .then((result) => {
-                console.log(result)
-                this.comments = result.data.comments
-                console.log(this.comments)
-            })
-            .catch(error => console.log(error))
-    }
+        
+        const { postId } = this.$route.params.postId;
+        this.getPost(postId);
+        
+    },
+
+    methods: {
+        
+        getPost(postId) {
+
+            axios.get('/posts/' + postId + '/comments')
+                .then((result) => {
+                   
+                      this.comments = result.data
+                })
+                .catch(error => console.log(error))
+        }
+    },
 }
 </script>

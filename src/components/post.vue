@@ -17,7 +17,7 @@
                 </div>
 
                 <div class="flex flex-col justify-center items-center">
-                    <button v-on:click="displayDetail(list)" class="hidden group-hover:block bg-gray-500 text-white h-10 w-44 rounded-lg font-bold">Read more</button>
+                    <router-link :to="'/post/' + list.id " class="hidden group-hover:block bg-gray-500 text-white h-10 w-44 rounded-lg font-bold">Read more</router-link>
                 </div>
             </div>
         </div>
@@ -74,15 +74,11 @@ export default {
             console.log('current:', this.page);
             this.pagination();
         },
-        displayDetail(details) {
-            console.log(details.id);
-            let id = details.id;
-            window.location.href = "/post/details/" + id;
-        },
+        
     },
 
     async mounted() {
-        let result = await axios.get("?limit=150")
+        let result = await axios.get("/posts?limit=150")
         console.log('api data', result.data.posts);
         this.postList = result.data.posts;
         this.pagination();
