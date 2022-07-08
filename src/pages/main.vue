@@ -9,7 +9,7 @@
                     about life and ask the bigger
                     questions. Take the weekend off from the technology .</p>
 
-                <router-link to="/post" class="bg-gray-400 hover:bg-gray-500 text-white rounded-lg flex flex-col items-center justify-center  w-32 h-10 font-bold" id="btn">My Blogs</router-link>
+                <router-link to="/posts/" class="bg-gray-400 hover:bg-gray-500 text-white rounded-lg flex flex-col items-center justify-center  w-32 h-10 font-bold" id="btn">My Blogs</router-link>
 
             </div>
         </div>
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import navBar from './nav.vue'
+import navBar from '../components/nav.vue'
 export default {
     name: 'mainPage',
     components: {

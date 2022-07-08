@@ -9,10 +9,10 @@
             <div class="sm:hidden lg:flex">
                 <ul class="flex space-x-10 text-gray-400 text-xl">
                     <router-link  class="hover:border-b-[2px] border-indigo-300" to="/" >Home</router-link>
-                    <router-link  class="hover:border-b-[2px] border-indigo-300" to="/post">Posts</router-link>
+                    <router-link  class="hover:border-b-[2px] border-indigo-300" to="/posts">Posts</router-link>
                     <router-link  class="hover:border-b-[2px] border-indigo-300" to="">Contact us</router-link>
-                    <router-link  class="hover:border-b-[2px] border-indigo-300" to="/post/:postId">Details</router-link>
-                    <router-link  class="hover:border-b-[2px] border-indigo-300" to="/post/details/comment/:postId">Comments</router-link>
+                    <router-link  class="hover:border-b-[2px] border-indigo-300" to="/posts/:postId">Details</router-link>
+                    
 
                 </ul>
             </div>
