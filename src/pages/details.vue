@@ -75,13 +75,12 @@ export default {
         navBar
     },
 
-    created() {
+    mounted() {
 
-        const {
-            postId
-        } = this.$route.params;
-        this.getPost(postId);
-        this.getComment(postId)
+        const {postId } = this.$route.params;
+         this.getPost(postId);
+         this.getComment(postId);
+        
 
     },
 
@@ -91,19 +90,20 @@ export default {
 
             axios.get(`/posts/${postId}`)
                 .then((result) => {
-
                     this.Details = result.data
-                })
-                .catch(error => console.log(error))
-
-            
+                })  .catch(function (error) {
+                        console.log(error);
+                    });
+                
         },
         getComment(postId){
             axios.get('/posts/' + postId + '/comments')
                 .then((result) => {
                     this.comments = result.data.comments
-                })
-                .catch(error => console.log(error))
+                })  .catch(function (error) {
+                        console.log(error);
+                    });
+                
         },
         
         

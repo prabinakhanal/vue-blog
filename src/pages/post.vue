@@ -44,8 +44,8 @@ export default {
 
     },
     methods: {
-        pagination() {
-            let trimStart = this.row_per_page * this.page;
+        pagination(page) {
+            let trimStart = this.row_per_page * page;
             let trimEnd = trimStart + this.row_per_page;
             this.trimedData = this.postList.slice(trimStart, trimEnd)
            
@@ -56,8 +56,8 @@ export default {
         },
         buttons(pages) {
             this.page = pages;
-          const url=`/${this.page+1}`;
-        window.location.href=url;
+            console.log(pages);
+         this.pagination(this.page);
         },
         
     },
@@ -67,7 +67,7 @@ export default {
         let result = await axios.get("/posts?limit=150")
         console.log('api data', result.data.posts);
         this.postList = result.data.posts;
-        this.pagination();
+        this.pagination(this.page);
         this.setPagination();
     }
 }
