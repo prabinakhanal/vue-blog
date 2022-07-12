@@ -5,7 +5,10 @@
                 <h1 class="text-2xl pb-5 text-slate-800 font-bold">{{post.title}}</h1>
 
                 <div class="flex flex-row justify-between">
-                    <h1 class="text-xl font-medium  text-slate-700 pb-5"><i class="fa-solid fa-user-tag"></i>:{{post.tags.join(', ')}}</h1>
+                    <span class="text-xl font-medium  text-slate-700 "><i class="fa-solid fa-user-tag">:</i></span>
+                    <div v-for="tags in post.tags" :key="tags">
+                    <h1 class="text-xl font-medium  text-slate-700 pb-5">{{tags}}</h1>
+                    </div>
                 </div>
                 <div>
                     <p class="font-xl font-medium text-slate-800">June 7 ,2022</p>
