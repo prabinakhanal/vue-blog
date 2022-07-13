@@ -21,9 +21,9 @@
 
         <div class="space-x-5 mt-4">
             <h3 class="mb-3 font-medium font-xl">Share post to</h3>
-            <button type="button" class="bg-[#3b5998] text-white rounded pl-2 pr-2"><i class="fa-brands fa-facebook-square"></i>Facebook</button>
-            <button type="button" class="bg-[#2f73a0] text-white rounded pl-2 pr-2"><i class="fa-brands fa-twitter-square"></i>Twitter</button>
-            <button type="button" class="bg-[#31a7fb] text-white rounded pl-2 pr-2"><i class="fa-brands fa-linkedin"></i>Linkedin</button>
+            <button type="button" class="bg-[#3b5998] text-white rounded pl-2 pr-2"><i class="fa-brands fa-facebook-square"></i> Facebook</button>
+            <button type="button" class="bg-[#2f73a0] text-white rounded pl-2 pr-2"><i class="fa-brands fa-twitter-square"></i> Twitter</button>
+            <button type="button" class="bg-[#31a7fb] text-white rounded pl-2 pr-2"><i class="fa-brands fa-linkedin"></i> Linkedin</button>
 
         </div>
 
