@@ -15,7 +15,7 @@ const routes= [
     },
     {
         name:'postPage',
-        path:'/posts',
+        path:'/posts/',
         component:postPage
 
     },
@@ -27,7 +27,7 @@ const routes= [
     },
     {
         name:'contactPage',
-        path:'/contactUs',
+        path:'/contactUs/',
         component:contactPage
 
     },

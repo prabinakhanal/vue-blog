@@ -2,14 +2,20 @@
 <navBar />
 <div style="background-image:url('');">
     <div class="grid grid-x-5 grid-y-5 grid-cols-3">
-        <postCard v-for="(post,index) in  trimedData" :key="index" :post="post">
 
-        </postCard>
+        <PostCard  v-slot="{post}" v-for="(post,index) in  trimedData" :key="index">
+            {{post.title}}
+        </PostCard>
+
+        <!-- <app slot-scope:tag="{post}">
+            {{post.tags}}
+        </app> -->
+
     </div>
 
     <div class="text-gray-300 flex items-center p-10 space-x-8 justify-center">
 
-        <div class="text-gray-300 flex items-center p-10 space-x-8 justify-center" >
+        <div class="text-gray-300 flex items-center p-10 space-x-8 justify-center">
 
             <div v-for="(pagenumbers, index) in count" :key="index">
                 <button v-on:click="buttons(index)" class="bg-gray-500 text-white h-10 w-20 hover:bg-blue-500 rounded-lg m-3 font-bold">{{pagenumbers}}</button>
@@ -24,7 +30,10 @@
 <script>
 import navBar from '../components/nav.vue'
 import axios from 'axios'
-import postCard from '../components/postCard.vue'
+
+
+import PostCard from '@/components/postCard.vue'
+
 export default {
     name: 'postPage',
 
@@ -32,23 +41,23 @@ export default {
         return {
             postList: [],
             page: 0,
-            row_per_page:30,
+            row_per_page: 30,
             trimedData: [],
             count: 0,
 
         }
     },
     components: {
-        navBar,
-        postCard
-
-    },
+    navBar,
+    
+    PostCard
+},
     methods: {
         pagination(page) {
             let trimStart = this.row_per_page * page;
             let trimEnd = trimStart + this.row_per_page;
             this.trimedData = this.postList.slice(trimStart, trimEnd)
-           
+
         },
 
         setPagination() {
@@ -57,13 +66,13 @@ export default {
         buttons(pages) {
             this.page = pages;
             console.log(pages);
-         this.pagination(this.page);
+            this.pagination(this.page);
         },
-        
+
     },
 
     async mounted() {
-        
+
         let result = await axios.get("/posts?limit=150")
         console.log('api data', result.data.posts);
         this.postList = result.data.posts;

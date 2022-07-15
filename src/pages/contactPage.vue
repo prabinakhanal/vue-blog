@@ -58,14 +58,15 @@ export default {
             email: null,
             number: null,
             subject: null,
-            message: null
+            message: null,
+          
         }
     },
     methods: {
         contact(e) {
 
-            if (this.name) {
-                console.log("data is sent");
+            if (this.name,this.email,this.number,this.subject && this.message) {
+            console.log("response is sent");
 
             }
             this.error = [];
