@@ -1,40 +1,36 @@
-import { createWebHistory, createRouter } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router';
 
-import mainPage from './components/main.vue'
-import postPage from './components/post.vue'
-import detailsPage from './components/details.vue'
-import commentPage from './components/comment.vue'
+import contactPage from './pages/Contact.vue';
+import detailsPage from './pages/Detail.vue';
+import mainPage from './pages/Home.vue';
+import postPage from './pages/Posts.vue';
 
-const routes= [
-    {
-        name:'mainPage',
-        path:'/',
-        component:mainPage
-
-    },
-    {
-        name:'postPage',
-        path:'/post',
-        component:postPage
-
-    },
-    {
-        name:'detailsPage',
-        path:'/post/details/:postId',
-        component:detailsPage
-
-    },
-    {
-        name:'commentPage',
-        path:'/post/details/comment/:postId',
-        component:commentPage
-
-    },
+const routes = [
+  {
+    name: 'mainPage',
+    path: '/',
+    component: mainPage,
+  },
+  {
+    name: 'posts',
+    path: '/posts/',
+    component: postPage,
+  },
+  {
+    name: 'post-detail',
+    path: '/posts/:postId',
+    component: detailsPage,
+  },
+  {
+    name: 'contactPage',
+    path: '/contactUs/',
+    component: contactPage,
+  },
 ];
 
-const router= createRouter({
-history:createWebHistory(),
-routes    
-})
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+});
 
 export default router;
