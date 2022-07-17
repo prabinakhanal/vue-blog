@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import contactPage from './pages/contactPage.vue';
-import detailsPage from './pages/details.vue';
-import mainPage from './pages/main.vue';
-import postPage from './pages/post.vue';
+import contactPage from './pages/Contact.vue';
+import detailsPage from './pages/Detail.vue';
+import mainPage from './pages/Home.vue';
+import postPage from './pages/Posts.vue';
 
 const routes = [
   {

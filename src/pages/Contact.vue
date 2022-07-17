@@ -6,23 +6,26 @@
         <div class="flex justify-center items-center min-h-screen pb-16">
             <div class="bg-white sm:w-3/5 lg:w-2/5  rounded-lg">
 
-                <div v-if="error.length">
-                    <b class="text-red-800 italic font-thin font-xs">Please fulfil the requirement...!!</b>
-                    <ul class="text-red-400 italic font-thin font-xs">
-                        <li v-for="e in error" :key="e.id">
-                            {{e}}
+                <div class="bg-gray-300 rounded">
+                    <div v-if="error.length">
+                        <b class="text-red-800 italic font-thin font-xs">Please fulfil the requirement...!!</b>
+                        <ul class="text-red-400 italic font-thin font-xs">
+                            <li v-for="e in error" :key="e.id">
+                                {{e}}
 
-                        </li>
-                    </ul>
-                </div>
-                <h1 class="flex justify-center items-center text-2xl font-bold m-6">Contact me</h1>
-                <div class="flex flex-col justify-center items-center">
-                    <input type="text" placeholder="Name" v-model="name" class="p-4 mb-3 outline-0 border-2 rounded-lg shadow-lg w-96 bg-gray-50">
-                    <input type="text" placeholder="Email" v-model="email" class="p-4 mb-3 outline-0 border-2 rounded-lg shadow-lg w-96 bg-gray-50">
-                    <input type="text" placeholder="Number" v-model="number" class="p-4 mb-3 outline-0 border-2 rounded-lg shadow-lg w-96 bg-gray-50">
-                    <input type="text" placeholder="Subject" v-model="subject" class="p-4 mb-3  outline-0 border-2 rounded-lg shadow-lg w-96 bg-gray-50">
-                    <textarea type="text" placeholder="Message" v-model="message" class="p-4 mb-3 outline-0 border-2 rounded-lg shadow-lg w-96 bg-gray-50"></textarea>
-                    <button type="submit" class="border-2 mb-4 rounded-lg bg-gray-400 text-white w-28 h-10 font-bold">Send</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h1 class="flex justify-center items-center text-2xl font-bold m-6 ">Contact Us</h1>
+                    <div class="flex flex-col justify-center items-center ">
+                        <input type="text" placeholder="Name" v-model="name" class="p-4 mb-3 outline-0 border-2 rounded-lg shadow-lg w-96 bg-gray-50">
+                        <input type="text" placeholder="Email" v-model="email" class="p-4 mb-3 outline-0 border-2 rounded-lg shadow-lg w-96 bg-gray-50">
+                        <input type="text" placeholder="Number" v-model="number" class="p-4 mb-3 outline-0 border-2 rounded-lg shadow-lg w-96 bg-gray-50">
+                        <input type="text" placeholder="Subject" v-model="subject" class="p-4 mb-3  outline-0 border-2 rounded-lg shadow-lg w-96 bg-gray-50">
+                        <textarea type="text" placeholder="Message" v-model="message" class="p-4 mb-3 outline-0 border-2 rounded-lg shadow-lg w-96 bg-gray-50"></textarea>
+                        <button type="submit" class="border-2 mb-4 rounded-lg bg-gray-400 text-white w-28 h-10 font-bold">Send</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -45,7 +48,7 @@
 </template>
 
 <script>
-import navbar from '../components/nav.vue'
+import navbar from '../components/Nav.vue'
 export default {
     name: 'contactPage',
     components: {
@@ -59,14 +62,14 @@ export default {
             number: null,
             subject: null,
             message: null,
-          
+
         }
     },
     methods: {
         contact(e) {
 
-            if (this.name,this.email,this.number,this.subject && this.message) {
-            console.log("response is sent");
+            if (this.name, this.email, this.number, this.subject && this.message) {
+                console.log("response is sent");
 
             }
             this.error = [];

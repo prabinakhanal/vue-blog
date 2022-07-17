@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import navBar from '../components/nav.vue'
+import navBar from '../components/Nav.vue'
 export default {
     name: 'mainPage',
     components: {
