@@ -3,7 +3,7 @@
 <div class="m-0 p-0 outline-0 border-0 font-500 font-outfit text-2xl">
 
     <div class="w-full h-96  overflow-hidden bg-no-repeat bg-cover bg-center" style="background-image:url('https://neilpatel.com/wp-content/uploads/2018/10/blog.jpg');">
-        <div class="mt-72">
+        <div class="mt-72 pl-44">
             <h1 class="text-lg  text-slate-800 font-medium">523 views , Published on sep 17,2021</h1>
 
             <h1 class="text-3xl  text-slate-800 font-bold ">{{Details.title}}</h1>
@@ -55,10 +55,10 @@
             </div>
 
             <div>
-                <h1 class="font-xl  mt-8  font-medium text-slate-600 ">comments <button id="cmnt" v-on:click="seen = !seen"> <i class="fa-solid fa-comments font-bold text-slate-600 text-2xl"></i></button></h1>
+                <h1 class="font-xl  mt-8  font-medium text-slate-600 mb-4 ">comments <button id="cmnt" v-on:click="seen = !seen"> <i class="fa-solid fa-comments font-bold text-slate-600 text-2xl"></i></button></h1>
 
                 <div v-if="seen" id="hide">
-                    <div class=" font-bold text-slate-600 text-xl mb-5" v-for="comment in comments" :key="comment.id">{{comment.body}}!!</div>
+                    <div class=" flex font-bold text-slate-600 text-xl mb-5 " v-for="comment in comments" :key="comment.id"> <img alt="no image" src="../assets/pic.jpg" class="rounded-full w-12 h-10 mr-3"> {{comment.body}}!!</div>
                 </div>
                 <h1 class="font-medium text-slate-600 font-xl">favorite <i class="fa-regular fa-heart"></i></h1>
 
@@ -90,9 +90,9 @@
             </div>
         </div>
 
-        <div class=" pr-8 w-full h-40 border-t-[1px] sm:space-x-8  sm:justify-between  sm:flex sm:justify-center sm:items-center">
+        <div class=" pr-8 w-full h-40 border-t-[1px]  sm:space-x-8  sm:justify-between  sm:flex sm:justify-center sm:items-center">
             <div>
-                <h1 class="sm:pl-8"><i class="fa-solid fa-copyright"></i>2022 blog | Contact</h1>
+                <h1 class="sm:pl-8 text-white"><i class="fa-solid fa-copyright"></i>2022 blog | Contact</h1>
             </div>
 
             <div>
