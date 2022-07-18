@@ -106,7 +106,7 @@
 </template>
 
 <script>
-import navBar from '../components/Nav.vue'
+import navBar from '../components/Nav_Bar.vue'
 import axios from 'axios'
 
 export default {

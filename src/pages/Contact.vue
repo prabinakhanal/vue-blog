@@ -48,7 +48,7 @@
 </template>
 
 <script>
-import navbar from '../components/Nav.vue'
+import navbar from '../components/Nav_Bar.vue'
 export default {
     name: 'contactPage',
     components: {
