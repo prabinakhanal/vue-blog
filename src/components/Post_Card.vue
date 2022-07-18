@@ -1,5 +1,5 @@
 <template>
-<div class="rounded shadow h-[405px]">
+<div class="rounded shadow ">
     <img class="w-full h-auto object-cover rounded-t-md" src="https://picsum.photos/300/200" />
     <main class="px-3 py-6">
         <router-link :to="'/posts/' + post.id" class="hover:text-slate-500 ">
