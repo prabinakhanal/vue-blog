@@ -61,11 +61,16 @@ export default {
 
         setPagination() {
             this.count = Math.ceil(this.postList.length / this.row_per_page);
+            
         },
         buttons(pages) {
             this.page = pages;
             console.log(pages);
             this.pagination(this.page);
+            this.$router.push({
+        path: "/posts/",
+        query: { page: this.page+1 },
+      });
         },
     },
 
