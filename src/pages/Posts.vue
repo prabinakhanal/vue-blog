@@ -32,7 +32,6 @@
 <script>
 import axios from 'axios';
 import navBar from '../components/Nav.vue';
-
 import PostCard from '../components/Post_Card.vue';
 
 export default {
